@@ -1,52 +1,55 @@
 <html>
   <head>
-  
+
   </head>
   <body>
     <p>
       <mat-toolbar color="primary">
         <mat-toolbar-row>
-          <mat-icon>local_fire_department</mat-icon>
+          <mat-icon style="margin-left: 10px;" matTooltip="Calories Burnt">whatshot</mat-icon>
           <span>Fitness Freaks</span>
-          <span class="example-spacer"></span>
+          <button mat-raised-button style="margin-left: auto; text-transform: uppercase;">Login</button>
+
         </mat-toolbar-row>
-      </mat-toolbar>
+     </mat-toolbar>
     </p>
-    <h1>Welcome to Fitness Freaks</h1>
-    <h3>With the best in class trainers and equipments, we provide you the best services in physical training.<br>
+
+    <!------------------HEAD LINE -------------->
+    <h1 style= "text-align: center; font-size: 200%; color: blue">Welcome to Fitness Freaks</h1>
+    <h2 style= "text-align: center;  color: blue">With the best in class trainers and equipments, we provide you the best services in physical training.<br>
       With customized training & appropriate diet plans we assure you to achieve physique as per your wish!
-    </h3>
+    </h2>
     <!-------MAT CARD-------->
     <br>
-    <div style="display:flex; flex-direction: row;">
-      <mat-card class="example-card">
+    <div style="display:flex; flex-direction: row; width: 90%;  height:25%; margin-left: 15%;">
+      <mat-card class="example-card"  >
         <mat-card-header>
           <mat-card-title color="bg-primary">Certified Trainers </mat-card-title>
         </mat-card-header>
-        <mat-card-content>
+        <mat-card-content> <br>
           <p>Get trained with our experienced trainers<br>Get full time assistance and guidance.</p>
         </mat-card-content>
       </mat-card>
-      <mat-card class="example-card">
+      <mat-card style="margin-left: 15px;" class="example-card">
         <mat-card-header>
           <mat-card-title>New Equipments</mat-card-title>
         </mat-card-header>
         <mat-card-content><br>
-          <p>With quaterly servicing and replacements<br> of equipments,we try to provide you the<br> best equipments in own.</p>
+          <p>With quarterly servicing and replacements<br> of equipments,we try to provide you the<br> best equipments in own.</p>
         </mat-card-content>
       </mat-card> <br>
-      <mat-card class="example-card">
+      <mat-card style="margin-left: 20px;" class="example-card">
         <mat-card-header>
           <mat-card-title>Steam Bath</mat-card-title>
         </mat-card-header>
-        <mat-card-content>
-          <p>After.</p>
+        <mat-card-content> <br>
+          <p>After a hardcore workout, get some bath in our steam bath.</p>
         </mat-card-content>
       </mat-card>
     </div>
-    <!------------- EXPANSION PANEL---------------->
+    <!-------------- EXPANSION PANEL ------------------>
     <br>
-    <mat-accordion>
+    <mat-accordion style="width:90%">
       <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
         <mat-expansion-panel-header>
           <mat-panel-title>
