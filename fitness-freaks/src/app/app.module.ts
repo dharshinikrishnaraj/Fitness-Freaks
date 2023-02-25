@@ -20,9 +20,10 @@ import { SignInComponent } from './sign-in/sign-in.component';
 import { RegisterComponent } from './register/register.component';
 
 import { RouterModule } from '@angular/router';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
-  declarations: [AppComponent, SignInComponent, RegisterComponent],
+  declarations: [AppComponent, SignInComponent, RegisterComponent, DashboardComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
