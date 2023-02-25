@@ -9,6 +9,8 @@
         <input matInput placeholder="Enter your phone number" class="form-control" name="phone" required>
       </div>
       <button mat-raised-button [disabled]="!loginForm.valid" type="submit" color="primary">Login</button>
+      <button mat-raised-button  routerLink="/register" type="submit" color="primary">Register</button>
+
     </form>
   </mat-card-content>
 </mat-card>

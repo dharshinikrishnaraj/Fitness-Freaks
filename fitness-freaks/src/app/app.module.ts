@@ -19,13 +19,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { RegisterComponent } from './register/register.component';
 
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    SignInComponent,
-    RegisterComponent
-  ],
+  declarations: [AppComponent, SignInComponent, RegisterComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -39,9 +36,10 @@ import { RegisterComponent } from './register/register.component';
     MatDialogModule,
     MatSelectModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
