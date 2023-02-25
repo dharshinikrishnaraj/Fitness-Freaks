@@ -21,9 +21,15 @@ import { RegisterComponent } from './register/register.component';
 
 import { RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
-  declarations: [AppComponent, SignInComponent, RegisterComponent, DashboardComponent],
+  declarations: [
+    AppComponent, 
+    SignInComponent, 
+    RegisterComponent, 
+    DashboardComponent, HomeComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
