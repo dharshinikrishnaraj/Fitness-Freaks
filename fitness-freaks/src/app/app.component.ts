@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { SignInComponent } from './sign-in/sign-in.component';
 
 
 @Component({
@@ -9,7 +8,5 @@ import { SignInComponent } from './sign-in/sign-in.component';
 })
 export class AppComponent {
   title = 'fitness-freaks';
-
-  panelOpenState = false;
-
+  
 }
