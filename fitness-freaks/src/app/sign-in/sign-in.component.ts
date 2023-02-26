@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormGroup, FormBuilder, FormControl} from '@angular/forms';
-import {  Validators } from '@angular/forms';
+import {FormGroup, FormBuilder, FormControl, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-sign-in',
@@ -9,7 +8,7 @@ import {  Validators } from '@angular/forms';
 })
 export class SignInComponent implements OnInit {
 
-  loginForm!: FormGroup;
+  loginForm: any = FormGroup;
 
   constructor(private formBuilder: FormBuilder){}
 

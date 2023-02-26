@@ -9,12 +9,11 @@ mat-form-field {
   display: block;
 }
 
-.container
-{
+.container {
   display: flex;
   flex-direction: column;
 }
 
-.container > * {
+.container>* {
   width: 100%;
 }
