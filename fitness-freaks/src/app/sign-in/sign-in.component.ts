@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormGroup, FormBuilder, FormControl, Validators} from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sign-in',
@@ -10,7 +11,7 @@ export class SignInComponent implements OnInit {
 
   loginForm: any = FormGroup;
 
-  constructor(private formBuilder: FormBuilder){}
+  constructor(private router: Router, private formBuilder: FormBuilder){}
 
   ngOnInit(){
     this.loginForm = this.formBuilder.group({
@@ -18,8 +19,14 @@ export class SignInComponent implements OnInit {
       phone: ['']
 
     })
+  } 
+  
+  clickRegister(){
+    this.router.navigateByUrl('/register')
   }
 
+
+    
   onSubmit(form: FormGroup){
     console.log(form.value.name);
      if (form.valid) {
@@ -28,4 +35,6 @@ export class SignInComponent implements OnInit {
         console.log('There is a problem with the form');
     }
   }
+
+  
 }

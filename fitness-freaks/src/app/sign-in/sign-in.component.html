@@ -1,9 +1,7 @@
-<router-outlet></router-outlet>
 <mat-card>
   <mat-card-content>
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm)" class="my-form">
-      <h2>Login</h2> 
-
+      <h2>Login</h2>
       <div class="form-group">
         <mat-form-field class="example-full-width">
           <input matInput placeholder="Enter your name" class="form-control" name="name" required>
@@ -13,10 +11,12 @@
         <mat-form-field class="example-full-width">
         <input matInput placeholder="Enter your phone number" class="form-control" name="phone" required>
         </mat-form-field>
-      </div>
-      <button mat-raised-button style="margin-right: auto;" [disabled]="!loginForm.valid" type="submit" color="primary">Login</button>
-      <span>New User?</span>
-      <button mat-raised-button routerLink="/register" type="submit" color="primary">Register</button>
+      </div><br>
+      <div>
+          <button mat-raised-button style="float: left" [disabled]="!loginForm.valid" type="submit"
+            color="primary">Login</button>
+          <button mat-raised-button  style="float: right" (click)="clickRegister()" type="submit" color="primary">Register</button>
+    </div>
     </form>
   </mat-card-content>
 </mat-card>
