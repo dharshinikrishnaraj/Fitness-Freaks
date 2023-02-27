@@ -15,26 +15,20 @@ export class SignInComponent implements OnInit {
 
   ngOnInit(){
     this.loginForm = this.formBuilder.group({
-      name: [''],
-      phone: ['']
-
+      name: ['', Validators.required],
+      phone: ['',[Validators.required, Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]]
     })
-  } 
-  
+  }
+
   clickRegister(){
-    this.router.navigateByUrl('/register')
+    this.router.navigate(['/register'])
   }
 
 
-    
-  onSubmit(form: FormGroup){
-    console.log(form.value.name);
-     if (form.valid) {
-        console.log(form.value.name);
-    } else {
-        console.log('There is a problem with the form');
-    }
+
+  onSubmit(data: any){
+    console.log(data);
   }
 
-  
+
 }
