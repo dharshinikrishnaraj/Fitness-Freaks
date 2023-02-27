@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MatDialog, MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
-import { SignInComponent } from 'src/app/sign-in/sign-in.component';
+import { SignInComponent } from 'src/app/components/sign-in/sign-in.component';
 import { Router } from '@angular/router';
 
 

@@ -23,10 +23,10 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 
 
-import { SignInComponent } from './sign-in/sign-in.component';
-import { RegisterComponent } from './register/register.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { HomeComponent } from './home/home.component';
+import { SignInComponent } from './components/sign-in/sign-in.component';
+import { RegisterComponent } from './components/register/register.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { HomeComponent } from './components/home/home.component';
 
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
