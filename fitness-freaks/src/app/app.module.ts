@@ -17,6 +17,10 @@ import {MatSelectModule} from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatStepperModule} from '@angular/material/stepper';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
 
 
 import { SignInComponent } from './sign-in/sign-in.component';
@@ -28,10 +32,10 @@ import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
-    AppComponent, 
-    SignInComponent, 
-    RegisterComponent, 
-    DashboardComponent, 
+    AppComponent,
+    SignInComponent,
+    RegisterComponent,
+    DashboardComponent,
     HomeComponent
   ],
   imports: [
@@ -50,6 +54,10 @@ import { HomeComponent } from './home/home.component';
     FormsModule,
     ReactiveFormsModule,
     MatButtonModule,
+    MatRadioModule,
+    MatStepperModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     RouterModule,
   ],
   providers: [],

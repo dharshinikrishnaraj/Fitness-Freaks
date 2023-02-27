@@ -1,48 +1,96 @@
-<p>register works!</p>
 <mat-card>
   <mat-card-content>
     <div class="container">
-<form [formGroup]="registerForm" (ngSubmit)="OnSubmit(registerForm)">
-  <h2>Register</h2>
-  <div class="form-group">
-    <input matInput type="text" placeholder="Name*" class="form-control" formControlName="name">
-  </div>
-  <div class="form-group">
-    <input matInput type="number" placeholder="Phone number*" class="form-control" formControlName="phone">
-    <p *ngIf="registerForm.controls.phone.errors?.minlength && registerForm.controls.phone.touched"
-      class="alert alert-danger">Phone number is not proper!</p>
-  </div>
-  <div class="form-group">
-    <input matInput type="text" placeholder="Address*" class="form-control" formControlName="address">
-  </div>
-  <div class="form-group">
-    <input matInput placeholder="Weight*" class="form-control" formControlName="weight">
-    <span matSuffix>Kg</span>
-  </div>
-  <div class="form-group">
-    <input matInput placeholder="Height*" class="form-control" formControlName="height" name="height">
-    <span matSuffix>cm</span>
-  </div>
-  <div class="form-group">
-    <mat-select placeholder="Package Type*" formControlName="package">
-      <mat-option value="quarterly">Quarterly</mat-option>
-      <mat-option value="halfyearly">Half-Yearly</mat-option>
-      <mat-option value="annual">Annual</mat-option>
-    </mat-select>
-  </div>
-  <div class="form-group">
-    <label>Personal Trainer</label>
-    <input matInput type="radio" formControlName="trainer" name="trainer" value="Yes" />
-    <label>Yes</label>
-    <input matInput type="radio" formControlName="trainer" name="trainer" value="No" />
-    <label>No</label>
-  </div>
-  <div class="form-group">
-   <input matInput type="date" placeholder="Start date*" formControlName="date" name="date" />
-  </div>
-  <button mat-raised-button type="submit" color="primary">Register</button>
-</form>
+    <h1>Register</h1>
+  <mat-stepper [linear]="isLinear" #stepper>
+  <mat-step [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>Personal Details</ng-template>
+      <!----------------Name----------------------->
+      <div class="form-group">
+        <mat-form-field appearance="fill">
+          <mat-label>Name</mat-label>
+          <input matInput  type="text" formControlName="name" />
+        </mat-form-field>
+      </div>
+      <!----------------Phone Number---------------->
+      <div class="form-group">
+        <mat-form-field appearance="fill">
+          <mat-label>Phone Number</mat-label>
+          <input matInput  type="number" name="phone" formControlName="phone" />
+        </mat-form-field>
+      </div>
+      <!----------------Address---------------->
+    <div class="form-group">
+      <mat-form-field appearance="fill">
+        <mat-label>Address</mat-label>
+        <input matInput  type="text" formControlName="address" />
+      </mat-form-field>
+    </div>
+      <!----------------Weight---------------->
+      <div class="form-group">
+        <mat-form-field appearance="fill">
+          <mat-label>Weight</mat-label>
+          <input matInput type="number" formControlName="weight" />
+          <span matSuffix>Kg</span>
+        </mat-form-field>
+      </div>
+      <!----------------Height---------------->
+      <div class="form-group">
+        <mat-form-field appearance="fill">
+          <mat-label>Height</mat-label>
+          <input matInput type="number" formControlName="height" />
+          <span matSuffix>cm</span>
+        </mat-form-field>
+      </div>
+      <div>
+        <button mat-raised-button style="float: left" color="primary" matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup" label="Package Details">
+    <form [formGroup]="secondFormGroup">
+      <!----------------Package Type---------------->
+    <br>
+      <div class="form-group">
+        <mat-form-field appearance="fill">
+          <mat-label>Package Type</mat-label>
+          <mat-select  formControlName="package" >
+            <mat-option value="quarterly">Quarterly</mat-option>
+            <mat-option value="halfyearly">Half-Yearly</mat-option>
+            <mat-option value="annual">Annual</mat-option>
+          </mat-select>
+        </mat-form-field>
+        </div>
+      <!----------------Personal Trainer---------------->
+      <div class="form-group">
+          <mat-radio-group style="float: left" formControlName="trainer">
+          <label>Personal Trainer</label>
+          <mat-radio-button  value="yes">Yes</mat-radio-button>
+          <mat-radio-button  value="no">No</mat-radio-button>
+          </mat-radio-group>
+      </div>
+      <br>
+      <!----------------Start Date---------------->
+      <br>
+      <div class="form-group">
+      <mat-form-field appearance="fill">
+        <mat-label>Choose a start date</mat-label>
+        <input matInput formControlName="startdate" [matDatepicker]="picker">
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      </div>
+      <!----------------Submit---------------->
+      <br>
+      <div>
+        <button mat-raised-button style="float: right" (click)="onSubmit(firstFormGroup.value,secondFormGroup.value)" type="submit" color="primary">Submit</button>
+        <button mat-raised-button style="float: left" color="primary" matStepperPrevious>Back</button>
+      </div>
+    </form>
+  </mat-step>
+  </mat-stepper>
+
     </div>
   </mat-card-content>
 </mat-card>
-

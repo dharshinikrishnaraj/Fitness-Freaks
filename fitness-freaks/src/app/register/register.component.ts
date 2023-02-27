@@ -9,29 +9,32 @@ import {FormGroup, FormBuilder, Validators, FormControl} from '@angular/forms';
 })
 export class RegisterComponent implements OnInit{
 
-  registerForm: any = FormGroup;
+  firstFormGroup:any = FormGroup;
+  secondFormGroup:any = FormGroup;
+
+  isLinear = false;
 
   constructor(private formBuilder: FormBuilder){
-
   }
 
   ngOnInit()
   {
-    this.registerForm = this.formBuilder.group({
-      name: ['', Validators.required],
-      phone: [' ',[Validators.required, Validators.minLength(10)]],
-      address: [' ',Validators.required],
-      weight: ['',Validators.required],
-      height: ['', Validators.required],
+    this.firstFormGroup = this.formBuilder.group({
+    name: ['', Validators.required],
+    phone: [' ',[Validators.required, Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]],
+    address: [' ',Validators.required],
+    weight: ['',Validators.required],
+    height: ['', Validators.required]
+  });
+  this.secondFormGroup = this.formBuilder.group({
       package: ['', Validators.required],
       trainer: ['', Validators.required],
-      date: ['', Validators.required],
-    })
+      startdate: ['', Validators.required],
+     });
   }
 
-  OnSubmit(form: FormGroup){
-    console.log(form.value.name, form.value.phone, form.value.address, form.value.weight,
-    form.value.height, form.value.package, form.get('trainer')?.value, form.value.date);
+  onSubmit(data1: any, data2: any){
+    console.log(data1, data2);
   }
 
 }
