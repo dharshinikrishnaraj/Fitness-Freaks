@@ -24,21 +24,20 @@ import {MatNativeDateModule} from '@angular/material/core';
 
 
 import { SignInComponent } from './components/sign-in/sign-in.component';
-import { RegisterComponent } from './components/register/register.component';
+import { RegisterComponent } from 'src/app/components/register/register.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HomeComponent } from './components/home/home.component';
 
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
-
 @NgModule({
   declarations: [
     AppComponent,
     SignInComponent,
-    RegisterComponent,
     DashboardComponent,
-    HomeComponent
+    RegisterComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

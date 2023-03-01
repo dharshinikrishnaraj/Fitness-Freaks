@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormGroup, FormBuilder, Validators, FormControl} from '@angular/forms';
+import { CommonService } from 'src/app/services/common.service';
 
 
 @Component({
@@ -14,7 +15,7 @@ export class RegisterComponent implements OnInit{
 
   isLinear = false;
 
-  constructor(private formBuilder: FormBuilder){
+  constructor(private formBuilder: FormBuilder, private commonservice: CommonService  ){
   }
 
   ngOnInit()
@@ -33,8 +34,13 @@ export class RegisterComponent implements OnInit{
      });
   }
 
-  onSubmit(data1: any, data2: any){
-    console.log(data1, data2);
+  onSubmit(){
+    if(this.firstFormGroup.valid && this.secondFormGroup.valid){
+      console.log(this.firstFormGroup.value)
+    }
+    else{
+        console.log("first2");
+    }
   }
 
 }
