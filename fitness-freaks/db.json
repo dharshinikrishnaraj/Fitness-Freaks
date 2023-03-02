@@ -1,7 +1,19 @@
 {
-    "user":[
-        {"name": "john", "phone": 9444455555, "id":1},
-        {"name": "jackie", "phone": 9666677777, "id":2},
-        {"name": "walter", "phone": 9222244444, "id":3}
-    ]
+  "user": [
+    {
+      "name": "john",
+      "phone": 9444455555,
+      "id": 1
+    },
+    {
+      "name": "jackie",
+      "phone": 9666677777,
+      "id": 2
+    },
+    {
+      "name": "walter",
+      "phone": 9222244444,
+      "id": 3
+    }
+  ]
 }

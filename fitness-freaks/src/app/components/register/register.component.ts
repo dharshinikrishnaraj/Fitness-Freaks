@@ -10,8 +10,9 @@ import { CommonService } from 'src/app/services/common.service';
 })
 export class RegisterComponent implements OnInit{
 
-  firstFormGroup:any = FormGroup;
-  secondFormGroup:any = FormGroup;
+  firstFormGroup: any = FormGroup;
+  secondFormGroup: any = FormGroup;
+  id: any = 10;
 
   isLinear = false;
 
@@ -34,13 +35,9 @@ export class RegisterComponent implements OnInit{
      });
   }
 
-  onSubmit(){
-    if(this.firstFormGroup.valid && this.secondFormGroup.valid){
-      console.log(this.firstFormGroup.value)
-    }
-    else{
-        console.log("first2");
-    }
+  onSubmit( ){
+    console.log(this.firstFormGroup.address.value);
+    console.log(this.secondFormGroup.value);
   }
 
 }

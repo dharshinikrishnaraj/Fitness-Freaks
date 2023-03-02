@@ -37,16 +37,15 @@ export class SignInComponent implements OnInit {
 
    if(data.name){
     this.users.forEach((item: any) => {
+      
       if(item.name === data.name && item.phone === data.phone){
+
         localStorage.setItem("isLoggedIn", "true");
-        this.router.navigate(['/dashboard']);
+        this.router.navigate(['dashboard']);
       }
-      else{
-        localStorage.clear();
-      }
+      
     });
    }
-
   }
 
 

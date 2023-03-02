@@ -21,6 +21,7 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
+import {MatTabsModule} from '@angular/material/tabs';
 
 
 import { SignInComponent } from './components/sign-in/sign-in.component';
@@ -59,6 +60,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatStepperModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatTabsModule,
     RouterModule,
     HttpClientModule
   ],

@@ -1,1 +1,81 @@
-<p>dashboard works!</p>
+<html>
+
+<head>
+</head>
+
+<body>
+  <p>
+    <mat-toolbar color="primary">
+      <mat-toolbar-row>
+        <mat-icon style="margin-left: 10px;" matTooltip="Calories Burnt">whatshot</mat-icon>
+        <span>Fitness Freaks</span>
+        <h4 style="margin-left: auto;" *ngFor = "let item of userList">{{item.name}}</h4>
+        <button mat-raised-button style="margin-left: auto;  width:80px; height:40px;  text-transform: uppercase;"
+          (click)="logout()">Logout</button>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  </p>
+  <!------------------HEAD LINE -------------->
+  <h1 style="text-align: center; color: blue">Welcome to Fitness Freaks</h1>
+  <h2 style="text-align: center;  color: blue">With the best in class trainers and equipments, we provide you the best
+    services in physical training.<br>
+    With customized training & appropriate diet plans we assure you to achieve physique as per your wish!
+  </h2>
+  <!-------MAT CARD-------->
+  <br>
+  <div style="display:flex; flex-direction: row; width: 90%;  height:25%; margin-left: 15%;">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title style="color: red">Certified Trainers </mat-card-title>
+      </mat-card-header>
+      <mat-card-content> <br>
+        <p>Get trained with our experienced trainers<br>Get full time assistance and guidance.</p>
+      </mat-card-content>
+    </mat-card>
+    <mat-card style="margin-left: 25px;">
+      <mat-card-header>
+        <mat-card-title style="color: red">New Equipments</mat-card-title>
+      </mat-card-header>
+      <mat-card-content><br>
+        <p>With quarterly servicing and replacements of<br> equipments,we try to provide you the<br> best equipments in
+          own.</p>
+      </mat-card-content>
+    </mat-card> <br>
+    <mat-card style="margin-left: 25px;">
+      <mat-card-header>
+        <mat-card-title style="color: red">Steam Bath</mat-card-title>
+      </mat-card-header>
+      <mat-card-content> <br>
+        <p>After a hardcore workout, get some bath<br> in our steam bath.</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <!-------------- EXPANSION PANEL ------------------>
+  <br>
+  <div>
+    <mat-accordion>
+      <mat-expansion-panel style="margin-left:inherit;" (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+           <h2 style="color: red">Contact Us</h2>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-tab-group>
+          <mat-tab label="Mysore Branch"><br> 
+            <b>Contact No:</b> 9686867675<br>
+            <b>Email Address:</b> FitnessMysore@gmail.com
+           </mat-tab>
+          <mat-tab label="Bhopal Branch"><br>
+            <b>Contact No:</b> 9486565650<br>
+            <b>Email Address:</b> FitnessBhopal@gmail.com
+          </mat-tab>
+        </mat-tab-group>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+
+</body>
+
+</html>
+
