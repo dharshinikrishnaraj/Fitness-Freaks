@@ -3,8 +3,8 @@
   <div class="container">
   <h1>Register</h1>
   <mat-stepper [linear]="isLinear" #stepper>
-  <mat-step [stepControl]="firstFormGroup">
-    <form [formGroup]="firstFormGroup">
+  <mat-step [stepControl]="registerform">
+    <form [formGroup]="registerform">
       <ng-template matStepLabel>Personal Details</ng-template>
       <!----------------Name----------------------->
       <div class="form-group">
@@ -48,15 +48,16 @@
       </div>
     </form>
   </mat-step>
-  <mat-step [stepControl]="secondFormGroup" label="Package Details">
-    <form [formGroup]="secondFormGroup">
+  <mat-step [stepControl]="registerform" label="Package Details">
+    <form [formGroup]="registerform">
       <!----------------Package Type---------------->
     <br>
       <div class="form-group">
         <mat-form-field appearance="fill">
           <mat-label>Package Type</mat-label>
           <mat-select  formControlName="package" >
-            <mat-option value="quarterly">Quarterly</mat-option>
+            <mat-option value="monthly">Monthly</mat-option>
+            <mat-option value="quaterly">Quaterly</mat-option>
             <mat-option value="halfyearly">Half-Yearly</mat-option>
             <mat-option value="annual">Annual</mat-option>
           </mat-select>
@@ -84,13 +85,12 @@
       <!----------------Submit---------------->
       <br>
       <div>
-        <button mat-raised-button style="float: right" (click)="onSubmit()" type="submit" color="primary">Submit</button>
+        <button mat-raised-button style="float: right" (click)="onSubmit(registerform.value)" type="submit" color="primary">Submit</button>
         <button mat-raised-button style="float: left" color="primary" matStepperPrevious>Back</button>
       </div>
     </form>
   </mat-step>
   </mat-stepper>
-
     </div>
   </mat-card-content>
 </mat-card>

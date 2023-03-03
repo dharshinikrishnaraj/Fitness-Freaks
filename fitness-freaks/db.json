@@ -14,6 +14,28 @@
       "name": "walter",
       "phone": 9222244444,
       "id": 3
+    },
+    {
+      "name": "dharsh",
+      "phone": 6767876768,
+      "address": " No.1",
+      "weight": 56,
+      "height": 76,
+      "package": "monthly",
+      "trainer": "no",
+      "startdate": "2023-03-01T18:30:00.000Z",
+      "id": 4
+    },
+    {
+      "name": "",
+      "phone": " ",
+      "address": " ",
+      "weight": "",
+      "height": "",
+      "package": "",
+      "trainer": "",
+      "startdate": "",
+      "id": 5
     }
   ]
 }

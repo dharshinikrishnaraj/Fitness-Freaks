@@ -43,7 +43,6 @@ export class SignInComponent implements OnInit {
         localStorage.setItem("isLoggedIn", "true");
         this.router.navigate(['dashboard']);
       }
-      
     });
    }
   }
