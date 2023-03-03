@@ -1,6 +1,7 @@
 <html>
 
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 </head>
 
 <body>
@@ -38,7 +39,7 @@
       </mat-card-header>
       <mat-card-content><br>
         <p>With quarterly servicing and replacements of<br> equipments,we try to provide you the<br> best equipments in
-          own.</p>
+          town.</p>
       </mat-card-content>
     </mat-card> <br>
     <mat-card style="margin-left: 25px;">
@@ -46,12 +47,72 @@
         <mat-card-title style="color: red">Steam Bath</mat-card-title>
       </mat-card-header>
       <mat-card-content> <br>
-        <p>After a hardcore workout, get some bath<br> in our steam bath.</p>
+        <p >After a hardcore workout, get some bath<br> in our steam bath.</p>
       </mat-card-content>
     </mat-card>
   </div>
-  <!-------------- EXPANSION PANEL ------------------>
+  <!-------------- TABLE ---------------------------->
   <br>
+  <div>
+    <mat-accordion>
+      <mat-expansion-panel style="margin-left:inherit;" (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h2 style="color: red">Exercise Routine</h2>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource">
+
+    <!-- Sets Column -->
+    <ng-container matColumnDef="sets">
+      <th mat-header-cell *matHeaderCellDef> Sets </th>
+      <td mat-cell *matCellDef="let element"> {{element.Sets}} </td>
+    </ng-container>
+
+    <!-- Monday Column -->
+    <ng-container matColumnDef="monday">
+      <th mat-header-cell *matHeaderCellDef> Monday </th>
+      <td mat-cell *matCellDef="let element"> {{element.Monday}} </td>
+    </ng-container>
+
+    <!-- Tuesday Column -->
+    <ng-container matColumnDef="tuesday">
+      <th mat-header-cell *matHeaderCellDef> Tuesday </th>
+      <td mat-cell *matCellDef="let element"> {{element.Tuesday}} </td>
+    </ng-container>
+
+    <!-- Wednesday Column -->
+    <ng-container matColumnDef="wednesday">
+      <th mat-header-cell *matHeaderCellDef> Wednesday </th>
+      <td mat-cell *matCellDef="let element"> {{element.Wednesday}} </td>
+    </ng-container>
+
+    <!-- Thursday Column -->
+    <ng-container matColumnDef="thursday">
+      <th mat-header-cell *matHeaderCellDef> Thursday </th>
+      <td mat-cell *matCellDef="let element"> {{element.Thursday}} </td>
+    </ng-container>
+
+    <!-- Friday Column -->
+    <ng-container matColumnDef="friday">
+      <th mat-header-cell *matHeaderCellDef> Friday </th>
+      <td mat-cell *matCellDef="let element"> {{element.Friday}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[4, 8, 12]" showFirstLastButtons aria-label="Select page of periodic elements">
+  </mat-paginator>
+</div>
+
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+  <!-------------- EXPANSION PANEL ------------------>
   <div>
     <mat-accordion>
       <mat-expansion-panel style="margin-left:inherit;" (opened)="panelOpenState = true"
@@ -62,7 +123,7 @@
           </mat-panel-title>
         </mat-expansion-panel-header>
         <mat-tab-group>
-          <mat-tab label="Mysore Branch"><br> 
+          <mat-tab label="Mysore Branch"><br>
             <b>Contact No:</b> 9686867675<br>
             <b>Email Address:</b> FitnessMysore@gmail.com
            </mat-tab>

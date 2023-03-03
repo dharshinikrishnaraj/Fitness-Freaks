@@ -22,7 +22,8 @@ import {MatStepperModule} from '@angular/material/stepper';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 import {MatTabsModule} from '@angular/material/tabs';
-
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { RegisterComponent } from 'src/app/components/register/register.component';
@@ -61,6 +62,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatDatepickerModule,
     MatNativeDateModule,
     MatTabsModule,
+    MatTableModule,
+    MatPaginatorModule,
     RouterModule,
     HttpClientModule
   ],

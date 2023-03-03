@@ -1,5 +1,6 @@
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 </head>
 <body>
   <p>
@@ -30,16 +31,16 @@
         <p>Get trained with our experienced trainers<br>Get full time assistance and guidance.</p>
       </mat-card-content>
     </mat-card>
-    <mat-card style="margin-left: 15px;">
+    <mat-card style="margin-left: 25px;">
       <mat-card-header>
         <mat-card-title style="color: red">New Equipments</mat-card-title>
       </mat-card-header>
       <mat-card-content><br>
         <p>With quarterly servicing and replacements<br> of equipments,we try to provide you the<br> best equipments in
-          own.</p>
+          town.</p>
       </mat-card-content>
     </mat-card> <br>
-    <mat-card style="margin-left: 15px;">
+    <mat-card style="margin-left: 25px;">
       <mat-card-header>
         <mat-card-title style="color: red">Steam Bath</mat-card-title>
       </mat-card-header>
@@ -48,6 +49,7 @@
       </mat-card-content>
     </mat-card>
   </div>
+
   <!-------------- EXPANSION PANEL ------------------>
   <br>
   <div>
@@ -56,11 +58,20 @@
         (closed)="panelOpenState = false">
         <mat-expansion-panel-header>
           <mat-panel-title>
-            Contact
+            <h2 style="color: red">Contact Us </h2>
           </mat-panel-title>
         </mat-expansion-panel-header>
-        <p>I'm visible because I am open</p>
-      </mat-expansion-panel>
+        <mat-tab-group>
+          <mat-tab label="Mysore Branch"><br>
+            <b>Contact No:</b> 9686867675<br>
+            <b>Email Address:</b> FitnessMysore@gmail.com
+          </mat-tab>
+          <mat-tab label="Bhopal Branch"><br>
+            <b>Contact No:</b> 9486565650<br>
+            <b>Email Address:</b> FitnessBhopal@gmail.com
+          </mat-tab>
+        </mat-tab-group>
+ </mat-expansion-panel>
     </mat-accordion>
   </div>
 
