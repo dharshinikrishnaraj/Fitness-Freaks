@@ -15,8 +15,8 @@
       </mat-form-field>
       </div><br>
       <div>
-          <button mat-raised-button style="float: left" type="submit" (click)="onSubmit(loginForm.value)" [disabled]="!loginForm.valid"   color="primary">Login</button>
-          <button mat-raised-button  style="float: right" (click)="clickRegister()" type="submit" color="primary">Register</button>
+          <button mat-raised-button (click)="onNoClick()" style="float: left" type="submit" (click)="onSubmit(loginForm.value)" [disabled]="!loginForm.valid"   color="primary">Login</button>
+          <button mat-raised-button (click)="onNoClick()" style="float: right" (click)="clickRegister()" type="submit" color="primary">Register</button>
     </div>
     </form>
   </mat-card-content>

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {FormGroup, FormBuilder, FormControl, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
 import { CommonService } from 'src/app/services/common.service';
+import {  MatDialogRef } from '@angular/material/dialog';
+import { HomeComponent } from 'src/app/components/home/home.component';
 
 
 @Component({
@@ -14,7 +16,8 @@ export class SignInComponent implements OnInit {
   loginForm: any = FormGroup;
   users: any = [];
 
-  constructor(private router: Router, private formBuilder: FormBuilder, private commonservice: CommonService){}
+  constructor(private router: Router, private formBuilder: FormBuilder, private commonservice: CommonService,
+    public dialogRef: MatDialogRef<HomeComponent>){}
 
   ngOnInit(){
     this.loginForm = this.formBuilder.group({
@@ -31,7 +34,9 @@ export class SignInComponent implements OnInit {
     this.router.navigate(['/register'])
   }
 
-
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
 
   onSubmit(data: any){
 
