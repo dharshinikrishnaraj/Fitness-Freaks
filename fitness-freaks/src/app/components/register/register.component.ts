@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class RegisterComponent implements OnInit{
 
   registerform: any = FormGroup;
-  
+
   isLinear = false;
 
   constructor(private formBuilder: FormBuilder, private commonservice: CommonService, private router: Router){
@@ -45,9 +45,8 @@ export class RegisterComponent implements OnInit{
     this.commonservice.addUser(dataToPass).subscribe((data: any) =>{
       console.log(data);
       this.router.navigate(['/home']);
+      alert('Your details are successfully submitted!');
   })
   }
-
-  
 
 }

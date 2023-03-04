@@ -36,6 +36,39 @@
       "trainer": "",
       "startdate": "",
       "id": 5
+    },
+    {
+      "name": "john",
+      "phone": 6767876768,
+      "address": " No.1",
+      "weight": 56,
+      "height": 76,
+      "package": "monthly",
+      "trainer": "yes",
+      "startdate": "2023-03-01T18:30:00.000Z",
+      "id": 6
+    },
+    {
+      "name": "dharsh",
+      "phone": 6383190736,
+      "address": " No.1",
+      "weight": 67,
+      "height": 87,
+      "package": "monthly",
+      "trainer": "no",
+      "startdate": "2023-03-01T18:30:00.000Z",
+      "id": 7
+    },
+    {
+      "name": "dharshini",
+      "phone": 6378638368,
+      "address": " No.1",
+      "weight": 45,
+      "height": 55,
+      "package": "monthly",
+      "trainer": "no",
+      "startdate": "2023-03-01T18:30:00.000Z",
+      "id": 8
     }
   ]
 }
